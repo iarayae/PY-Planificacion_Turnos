@@ -50,3 +50,10 @@ print(tareas_df[["Día", "Actividad", "Duración (hrs)", "Persona asignada"]])
 
 print("\n=== Carga final por persona")
 print(carga_persona)
+
+#------- Carga de información en excel independiente -------
+# Guardar resultados
+ruta_salida = "output/asignaciones.xlsx"
+tareas_df.to_excel(ruta_salida, index=False)
+
+print(f"\n Asignaciones guardadas en: {ruta_salida}")
